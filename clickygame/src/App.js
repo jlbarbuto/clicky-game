@@ -1,7 +1,31 @@
-import React, { Component } from 'react';
-import HelloReact from "./components/photoCard";
+import React from 'react';
+import BirdCard from "./components/BirdCard";
+import birds from "./birds.json";
+import Wrapper from "./components/Wrapper";
 // import logo from './logo.svg';
 import './App.css';
+
+class App extends React.Component {
+    state = {
+        birds
+    };
+
+    render() {
+        return(
+            <Wrapper>
+                {this.state.birds.map(item => (
+                    <BirdCard 
+                        id={item.id}
+                        key={item.id}
+                        name={item.name}
+                        image={item.image}
+                    />
+                ))}
+            </Wrapper>
+        )
+    }
+};
+
 
 // class App extends Component {
 //   render() {
@@ -18,7 +42,5 @@ import './App.css';
 //     );
 //   }
 // }
-
-const App = () => <HelloReact />;
 
 export default App;

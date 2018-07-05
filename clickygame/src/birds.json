@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Cassowary",
+        "image": "clickygame/src/birdPics/cassowary.jpg",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "name": "Kiwi",
+        "image": "./birdPics/kiwi.jpg",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "name": "Emu",
+        "image": "./birdPics/emu.jpg",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "name": "Ostrich",
+        "image": "./birdPics/ostrich.jpg",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "Dodo",
+        "image": "./birdPics/dodo.jpg",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "Kakapo",
+        "image": "./birdPics/kakpo.jpg",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "Moa",
+        "image": "./birdPics/moa.jpg",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "Penguin",
+        "image": "./birdPics/penguin.jpg",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "Teal",
+        "image": "./birdPics/teal.jpg",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "name": "Takahe",
+        "image": "./birdPics/takahe.jpg",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "Kiwi2",
+        "image": "./birdPics/kiwi2.jpg",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name": "Yellow Penguin",
+        "image": "./birdPics/yellowPenguin.jpg",
+        "clicked": false
+    }
+]
