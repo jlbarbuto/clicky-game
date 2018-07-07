@@ -2,13 +2,13 @@
     {
         "id": 1,
         "name": "Cassowary",
-        "image": "clickygame/src/birdPics/cassowary.jpg",
+        "image": "birdPics/cassowary.jpg",
         "clicked": false
     },
     {
         "id": 2,
         "name": "Kiwi",
-        "image": "./birdPics/kiwi.jpg",
+        "image": "birdPics/kiwi.jpg",
         "clicked": false
     },
     {
@@ -32,7 +32,7 @@
     {
         "id": 6,
         "name": "Kakapo",
-        "image": "./birdPics/kakpo.jpg",
+        "image": "./birdPics/kakapo.jpg",
         "clicked": false
     },
     {
