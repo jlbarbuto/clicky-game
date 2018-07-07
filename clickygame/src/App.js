@@ -2,6 +2,8 @@ import React from 'react';
 import BirdCard from "./components/BirdCard";
 import birds from "./birds.json";
 import Wrapper from "./components/Wrapper";
+import Header from "./components/Header";
+import Container from "./components/Container";
 // import logo from './logo.svg';
 import './App.css';
 
@@ -12,16 +14,19 @@ class App extends React.Component {
 
     render() {
         return(
-            <Wrapper>
-                {this.state.birds.map(item => (
-                    <BirdCard 
-                        id={item.id}
-                        key={item.id}
-                        name={item.name}
-                        image={item.image}
-                    />
-                ))}
-            </Wrapper>
+            <Container>
+                <Header />
+                <Wrapper>
+                    {this.state.birds.map(item => (
+                        <BirdCard 
+                            id={item.id}
+                            key={item.id}
+                            name={item.name}
+                            image={item.image}
+                        />
+                    ))}
+                </Wrapper>
+            </Container>
         )
     }
 };
