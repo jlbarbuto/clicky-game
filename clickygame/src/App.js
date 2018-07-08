@@ -8,13 +8,16 @@ import Nav from "./components/Nav";
 import './App.css';
 
 class App extends React.Component {
+    //sets the inital state value for the class
     state = {
         message: "Click a bird to start!",
         birds: birds,
         topScore: 0,
-        currScore: 0
+        currScore: 0,
+        // clicked: ["a"]
     };
 
+    //logic for shuffling an array
     shuffleDeck = array => {
         var currentIndex = array.length, temporaryValue, randomIndex;
       
@@ -34,15 +37,71 @@ class App extends React.Component {
         return array;
     }
 
+    //handles shuffle and reassingment of birds array
     handleShuffle = () => {
         let shuffledBirds = this.shuffleDeck(birds);
         this.setState({ birds: shuffledBirds});
     };
 
-    handleBirdClick = event => {
-        event.preventDefault();
-        this.handleShuffle();
-    }
+    //handles click events for earch bird card
+    handleBirdClick = (id, clicked) => {
+        const currOrder = this.state.birds;
+        console.log(this.state.birds);
+        console.log(id);
+        console.log(clicked);
+        if (clicked) {
+            this.setState({
+                message:"WONRG.",
+                currScore: 0
+            });
+            this.handleShuffle();
+        }else{
+            currOrder.forEach((image, i) => {
+                if (id===image.id){
+                    currOrder[i].clicked = true;
+                }
+            });
+
+            const newScore = this.state.currScore + 1;
+            let newTopScore = 0;
+            if (newScore>this.state.topScore){
+                newTopScore = newScore;
+            }else{
+                newTopScore = this.state.topScore;
+            }
+
+            this.setState({
+                message:"Yay!",
+                currScore: newScore,
+                topScore: newTopScore
+            });
+            this.handleShuffle();
+        }
+
+
+        // // event.preventDefault();
+        // console.log("this is the id of the clicked bird: " + id);
+        // console.log("original clicked length: " + this.state.clicked.length);
+
+        // //for loop goes through every element in the 'clicked' array
+        // for (let i=0; i<this.state.clicked.length; i++){
+        //     console.log(this.state.clicked[i]);
+        //     console.log(typeof this.state.clicked[i]);
+        //     var compareId = toString(id);
+        //     //if the current bird's id matches anything the clicked array...
+        //     if (this.state.clicked[i] === compareId){
+        //         this.setState.message="WRONG.";
+        //     }else{
+        //         console.log(id);
+        //         var newArr = this.state.clicked.slice();
+        //         newArr.push(compareId);
+        //         this.setState({clicked:newArr});
+        //         // this.setState({ clicked: this.state.clicked.push(id) });
+        //         console.log(this.state.clicked);
+        //         this.handleShuffle();
+        //     }
+        // };
+     }
 
     render() {
         return(
