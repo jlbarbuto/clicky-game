@@ -4,12 +4,13 @@ import birds from "./birds.json";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
 import Container from "./components/Container";
-// import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
     state = {
-        birds
+        birds: birds,
+        topScore: 0,
+        currScore: 0
     };
 
     render() {

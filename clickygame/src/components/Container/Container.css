@@ -1,8 +1,6 @@
-.wrapper {
-    padding-top: 50px;
-    /* background: #ECEFF1; */
+.container {
     height: 100%;
-    width: 850px;
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     padding: 20px;
@@ -10,5 +8,4 @@
     align-content: flex-start;
     overflow: auto;
     margin: auto;
-    background-color: white;
   }
