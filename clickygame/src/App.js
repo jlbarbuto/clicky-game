@@ -14,7 +14,7 @@ class App extends React.Component {
         birds: birds,
         topScore: 0,
         currScore: 0,
-        // clicked: ["a"]
+        clicked: []
     };
 
     //logic for shuffling an array
@@ -44,23 +44,17 @@ class App extends React.Component {
     };
 
     //handles click events for earch bird card
-    handleBirdClick = (id, clicked) => {
-        const currOrder = this.state.birds;
-        console.log(this.state.birds);
-        console.log(id);
-        console.log(clicked);
-        if (clicked) {
+    handleBirdClick = id => {
+        let clickedIds = this.state.clicked;
+
+        if(clickedIds.includes(id)){
             this.setState({
-                message:"WONRG.",
+                message: "WRONG.",
                 currScore: 0
             });
-            this.handleShuffle();
+            return;
         }else{
-            currOrder.forEach((image, i) => {
-                if (id===image.id){
-                    currOrder[i].clicked = true;
-                }
-            });
+            clickedIds.push(id);
 
             const newScore = this.state.currScore + 1;
             let newTopScore = 0;
@@ -71,12 +65,46 @@ class App extends React.Component {
             }
 
             this.setState({
-                message:"Yay!",
                 currScore: newScore,
+                message: "Yay!",
+                clicked: clickedIds,
                 topScore: newTopScore
             });
             this.handleShuffle();
+            return;
         }
+
+
+        // if (clicked) {
+        //     this.setState({
+        //         message:"WRONG.",
+        //         currScore: 0
+        //     });
+        //     this.handleShuffle();
+        // }else{
+        //     currOrder.forEach((bird, i) => {
+        //         if (id===bird.id){
+        //             currOrder[i].clicked = true;
+        //         }
+        //     });
+
+        //     const newScore = this.state.currScore + 1;
+        //     let newTopScore = 0;
+        //     if (newScore>this.state.topScore){
+        //         newTopScore = newScore;
+        //     }else{
+        //         newTopScore = this.state.topScore;
+        //     }
+
+        //     this.setState({
+        //         message:"Yay!",
+        //         currScore: newScore,
+        //         topScore: newTopScore
+        //     });
+        //     this.handleShuffle();
+        // }
+
+
 
 
         // // event.preventDefault();
