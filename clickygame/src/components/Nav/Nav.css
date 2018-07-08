@@ -1,0 +1,26 @@
+.nav{
+  background-color: slategrey;
+  color: oldlace;
+  text-align: center;
+  vertical-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+span,a,h2{
+  background-color: slategrey;
+  color: oldlace;
+  display: inline;
+}
+
+.score{
+  float: right;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+.homelink{
+  float: left;
+  padding-left: 10px;
+  padding-top: 5px;
+}
