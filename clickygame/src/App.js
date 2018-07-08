@@ -4,7 +4,6 @@ import birds from "./birds.json";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
 import Container from "./components/Container";
-import Nav from "./components/Nav";
 import './App.css';
 
 class App extends React.Component {
@@ -14,7 +13,8 @@ class App extends React.Component {
         birds: birds,
         topScore: 0,
         currScore: 0,
-        clicked: []
+        clicked: [],
+        directions: "The Flightless Birds of the World"
     };
 
     //logic for shuffling an array
@@ -24,11 +24,11 @@ class App extends React.Component {
         // While there remain elements to shuffle...
         while (0 !== currentIndex) {
       
-          // Pick a remaining element...
+          //remaining element randomly selected
           randomIndex = Math.floor(Math.random() * currentIndex);
           currentIndex -= 1;
       
-          // And swap it with the current element.
+          //and swaped with the current element
           temporaryValue = array[currentIndex];
           array[currentIndex] = array[randomIndex];
           array[randomIndex] = temporaryValue;
@@ -46,16 +46,22 @@ class App extends React.Component {
     //handles click events for earch bird card
     handleBirdClick = id => {
         let clickedIds = this.state.clicked;
-
+        //check for already existing click
         if(clickedIds.includes(id)){
+            //if bird's id is already in the array, game starts over
+            //reset score and empty clicked array
             this.setState({
                 message: "WRONG.",
-                currScore: 0
+                currScore: 0,
+                clicked: [],
+                directions: "You lost! Click a bird to start over."
             });
             return;
         }else{
+            //add bird's id to the clicked array
             clickedIds.push(id);
 
+            //update the current and top scores
             const newScore = this.state.currScore + 1;
             let newTopScore = 0;
             if (newScore>this.state.topScore){
@@ -68,78 +74,22 @@ class App extends React.Component {
                 currScore: newScore,
                 message: "Yay!",
                 clicked: clickedIds,
-                topScore: newTopScore
+                topScore: newTopScore,
+                directions: "Correct! Click a new bird."
             });
             this.handleShuffle();
             return;
-        }
-
-
-        // if (clicked) {
-        //     this.setState({
-        //         message:"WRONG.",
-        //         currScore: 0
-        //     });
-        //     this.handleShuffle();
-        // }else{
-        //     currOrder.forEach((bird, i) => {
-        //         if (id===bird.id){
-        //             currOrder[i].clicked = true;
-        //         }
-        //     });
-
-        //     const newScore = this.state.currScore + 1;
-        //     let newTopScore = 0;
-        //     if (newScore>this.state.topScore){
-        //         newTopScore = newScore;
-        //     }else{
-        //         newTopScore = this.state.topScore;
-        //     }
-
-        //     this.setState({
-        //         message:"Yay!",
-        //         currScore: newScore,
-        //         topScore: newTopScore
-        //     });
-        //     this.handleShuffle();
-        // }
-
-
-
-
-        // // event.preventDefault();
-        // console.log("this is the id of the clicked bird: " + id);
-        // console.log("original clicked length: " + this.state.clicked.length);
-
-        // //for loop goes through every element in the 'clicked' array
-        // for (let i=0; i<this.state.clicked.length; i++){
-        //     console.log(this.state.clicked[i]);
-        //     console.log(typeof this.state.clicked[i]);
-        //     var compareId = toString(id);
-        //     //if the current bird's id matches anything the clicked array...
-        //     if (this.state.clicked[i] === compareId){
-        //         this.setState.message="WRONG.";
-        //     }else{
-        //         console.log(id);
-        //         var newArr = this.state.clicked.slice();
-        //         newArr.push(compareId);
-        //         this.setState({clicked:newArr});
-        //         // this.setState({ clicked: this.state.clicked.push(id) });
-        //         console.log(this.state.clicked);
-        //         this.handleShuffle();
-        //     }
-        // };
-     }
+        }   
+    }
 
     render() {
         return(
             <Container>
-                <Nav
-                    message={this.state.message}
+                <Header 
                     currScore={this.state.currScore}
                     topScore={this.state.topScore}
+                    directions={this.state.directions}
                 />
-                <Header />
                 <Wrapper>
                     {this.state.birds.map(item => (
                         <BirdCard 

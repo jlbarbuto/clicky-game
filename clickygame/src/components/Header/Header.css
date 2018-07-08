@@ -9,6 +9,13 @@
     padding-top: 15px;
 }
 
-h1, h5{
+h1, h5, span, a{
     background-color: black;
+    color: oldlace;
+}
+
+.homelink{
+    float: left;
+    padding-left: 20px;
+    font-size: 20px;
 }
