@@ -15,3 +15,4 @@ Create-react-app was used to initalize the file structure. Components developed 
 -Container (contains everything)
 
 ## Find the deployed app throught Github here:
+https://jlbarbuto.github.io/clicky-game/
