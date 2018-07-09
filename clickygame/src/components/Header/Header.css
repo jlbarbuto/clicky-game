@@ -1,21 +1,17 @@
-.header{
+.jumbotron{
     background-color: black;
     color: oldlace;
-    height: 150px;
     text-align: center;
     vertical-align: center;
-    width: 100%;
     margin-bottom: 30px;
     padding-top: 15px;
 }
 
-h1, h5, span, a{
+h1, h3, a, p{
     background-color: black;
     color: oldlace;
 }
 
-.homelink{
-    float: left;
-    padding-left: 20px;
-    font-size: 20px;
+h1, p, h3{
+    font-family: 'Gaegu', cursive;
 }

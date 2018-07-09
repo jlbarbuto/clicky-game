@@ -2,73 +2,61 @@
     {
         "id": 1,
         "name": "Cassowary",
-        "image": "birdPics/cassowary.jpg",
-        "clicked": false
+        "image": "birdPics/cassowary.jpg"
     },
     {
         "id": 2,
         "name": "Kiwi",
-        "image": "birdPics/kiwi.jpg",
-        "clicked": false
+        "image": "birdPics/kiwi.jpg"
     },
     {
         "id": 3,
         "name": "Emu",
-        "image": "./birdPics/emu.jpg",
-        "clicked": false
+        "image": "./birdPics/emu.jpg"
     },
     {
         "id": 4,
         "name": "Ostrich",
-        "image": "./birdPics/ostrich.jpg",
-        "clicked": false
+        "image": "./birdPics/ostrich.jpg"
     },
     {
         "id": 5,
         "name": "Dodo",
-        "image": "./birdPics/dodo.jpg",
-        "clicked": false
+        "image": "./birdPics/dodo.jpg"
     },
     {
         "id": 6,
         "name": "Kakapo",
-        "image": "./birdPics/kakapo.jpg",
-        "clicked": false
+        "image": "./birdPics/kakapo.jpg"
     },
     {
         "id": 7,
         "name": "Moa",
-        "image": "./birdPics/moa.jpg",
-        "clicked": false
+        "image": "./birdPics/moa.jpg"
     },
     {
         "id": 8,
         "name": "Penguin",
-        "image": "./birdPics/penguin.jpg",
-        "clicked": false
+        "image": "./birdPics/penguin.jpg"
     },
     {
         "id": 9,
         "name": "Teal",
-        "image": "./birdPics/teal.jpg",
-        "clicked": false
+        "image": "./birdPics/teal.jpg"
     },
     {
         "id": 10,
         "name": "Takahe",
-        "image": "./birdPics/takahe.jpg",
-        "clicked": false
+        "image": "./birdPics/takahe.jpg"
     },
     {
         "id": 11,
         "name": "Kiwi2",
-        "image": "./birdPics/kiwi2.jpg",
-        "clicked": false
+        "image": "./birdPics/kiwi2.jpg"
     },
     {
         "id": 12,
         "name": "Yellow Penguin",
-        "image": "./birdPics/yellowPenguin.jpg",
-        "clicked": false
+        "image": "./birdPics/yellowPenguin.jpg"
     }
 ]

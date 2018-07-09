@@ -1,11 +1,13 @@
 .container {
-    height: 100%;
     width: 100%;
-    display: flex;
-    flex-flow: row wrap;
     padding: 20px;
-    justify-content: space-around;
-    align-content: flex-start;
-    overflow: auto;
-    margin: auto;
+    background-image: url("http://www.northlandwoodcouncil.co.nz/images/nz-forest.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+
+.btn{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: 'Gaegu', cursive;
+}
